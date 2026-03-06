@@ -19,8 +19,8 @@ const contactCards = [
   {
     icon: Phone,
     title: 'Phone',
-    detail: '+880 1XXX-XXXXXX',
-    href: 'tel:+8801XXXXXXXXX',
+    detail: '09678-791213',
+    href: 'tel:09678791213',
   },
 ];
 

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Facebook, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
 import siteConfig, { Service, NavItem } from '@/content/siteConfig';
 
 export function Footer() {
@@ -78,27 +78,42 @@ export function Footer() {
                 <span>{siteConfig.email}</span>
               </a>
 
+              <a
+                href="tel:09678791213"
+                className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-[#00d1ff]"
+              >
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>09678-791213</span>
+              </a>
+
+              <a
+                href="https://wa.me/8801410177888"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-[#00d1ff]"
+              >
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>WhatsApp: 01410-177888</span>
+              </a>
+
               <div className="flex items-center gap-3 pt-2">
                 <a
-                  href="#"
+                  href="https://facebook.com/intacticsys"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   className="p-2 rounded-lg bg-white/5 text-gray-400 transition-colors hover:text-[#00d1ff] hover:bg-white/10"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/company/intacticsys"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="p-2 rounded-lg bg-white/5 text-gray-400 transition-colors hover:text-[#00d1ff] hover:bg-white/10"
                 >
                   <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  aria-label="Twitter"
-                  className="p-2 rounded-lg bg-white/5 text-gray-400 transition-colors hover:text-[#00d1ff] hover:bg-white/10"
-                >
-                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>

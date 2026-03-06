@@ -34,7 +34,7 @@ const siteConfig: SiteConfig = {
     en: "Innovative Solutions for Your Business Growth",
     bn: "আপনার ব্যবসায়িক বৃদ্ধির জন্য উদ্ভাবনী সমাধান",
   },
-  email: "info@intacticsystems.com",
+  email: "ask@intacticsys.com",
   navItems: [
     {
       id: "home",
