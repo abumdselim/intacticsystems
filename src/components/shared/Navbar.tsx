@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
-import siteConfig from '@/content/siteConfig';
+import siteConfig, { NavItem } from '@/content/siteConfig';
 
 type Lang = 'en' | 'bn';
 
@@ -59,7 +59,7 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
-              {navLinks.map((item) => (
+              {navLinks.map((item: NavItem) => (
                 <Link
                   key={item.id}
                   href={item.href}
@@ -154,7 +154,7 @@ export default function Navbar() {
               <div className="flex flex-col h-full pt-24 px-6 pb-8">
                 {/* Nav Links */}
                 <div className="flex flex-col gap-1">
-                  {navLinks.map((item, i) => (
+                  {navLinks.map((item: NavItem, i: number) => (
                     <motion.div
                       key={item.id}
                       initial={{ opacity: 0, x: 20 }}

@@ -9,7 +9,7 @@ import {
   ShoppingBag,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import siteConfig from '@/content/siteConfig';
+import siteConfig, { Service } from '@/content/siteConfig';
 
 const iconMap: Record<string, LucideIcon> = {
   'custom-software': Code,
@@ -31,7 +31,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -64,7 +64,7 @@ export default function Services() {
           viewport={{ once: true, margin: '-80px' }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {siteConfig.services.map((service) => {
+          {siteConfig.services.map((service: Service) => {
             const Icon = iconMap[service.id] || Code;
 
             return (

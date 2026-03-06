@@ -10,7 +10,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import Link from 'next/link';
-import siteConfig from '@/content/siteConfig';
+import siteConfig, { Service } from '@/content/siteConfig';
 
 const iconMap: Record<string, React.ElementType> = {
   'custom-software': Code,
@@ -35,7 +35,7 @@ export default function ServicesPage() {
 
       {/* Zig-Zag Services */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 space-y-28">
-        {siteConfig.services.map((service, index) => {
+        {siteConfig.services.map((service: Service, index: number) => {
           const Icon = iconMap[service.id] || Code;
           const isReversed = index % 2 !== 0;
 
@@ -51,7 +51,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, x: isReversed ? 40 : -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
                 className="w-full md:w-1/2"
               >
                 <div className="relative bg-gradient-to-br from-[#174d70] to-[#0d3550] rounded-3xl shadow-2xl aspect-square md:aspect-[4/3] flex items-center justify-center overflow-hidden">
@@ -65,7 +65,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, x: isReversed ? -40 : 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
                 className="w-full md:w-1/2"
               >
                 <h2 className="text-3xl font-bold text-[#174d70] mb-4">

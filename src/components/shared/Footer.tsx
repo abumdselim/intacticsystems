@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Facebook, Linkedin, Twitter, Mail } from 'lucide-react';
-import siteConfig from '@/content/siteConfig';
+import siteConfig, { Service, NavItem } from '@/content/siteConfig';
 
 export function Footer() {
   const { services, navItems } = siteConfig;
@@ -32,7 +32,7 @@ export function Footer() {
               Our Services
             </h3>
             <ul className="space-y-3">
-              {services.map((service) => (
+              {services.map((service: Service) => (
                 <li key={service.id}>
                   <Link
                     href="/#services"
@@ -51,7 +51,7 @@ export function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {navItems.map((item) => (
+              {navItems.map((item: NavItem) => (
                 <li key={item.id}>
                   <Link
                     href={item.href}
