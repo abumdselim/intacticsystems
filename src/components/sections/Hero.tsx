@@ -225,7 +225,7 @@ function FloatGroup({
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative -mt-20 pt-20 min-h-[90vh] flex items-center overflow-hidden">
       {/* Rich multi-stop gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0f2a3f] via-[#174d70] to-[#0d1f2d]" />
 
